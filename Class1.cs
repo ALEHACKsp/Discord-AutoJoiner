@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace KN.Discord.AutoJoiner
+namespace AutoJoiner
 {
-    public class KNAutoJoiner
+    public class Discord
     {
         private static string CO_Token()
         {
@@ -35,15 +35,11 @@ namespace KN.Discord.AutoJoiner
         /// <summary>
         ///     Discord Group Auto Join.
         /// </summary>
-
         public static void Execute(string string_0)
         {
             try
             {
                 WebClient wc = new WebClient();
-                if (authtoken == "") return;
-                if (authtoken == " ") return;
-               
                 string_0 = CO_GetFinalRedirect(string_0);
                 string_0 = string_0.Replace("discord.gg/", "");
                 string_0 = string_0.Replace("https://", "");
